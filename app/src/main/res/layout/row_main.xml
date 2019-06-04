@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="datarow"
+                type="com.example.myapplication.TextRowModel"/>
+    </data>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <LinearLayout
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="2">
+                <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/colorMediumblue"
+                        android:text="@{datarow.brand}"/>
+                <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/colorBlack"
+                        android:text="@{datarow.size}"/>
+                <TextView
+                        android:id="@+id/text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/colorBlack"
+                        android:text="@{datarow.generation}"/>
+                <TextView
+                        android:id="@+id/text4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="@{datarow.number}"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                <TextView
+                        android:id="@+id/text5"
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="70dp"
+                        android:textSize="20dp"
+                        android:textColor="@color/colorRed"
+                        android:text="TextView"/>
+                <Button
+                        android:text="Button"
+                        android:textColor="@color/colorWhite"
+                        android:drawableLeft="@drawable/buy"
+                        android:id="@+id/btn1"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/btn1"
+                        android:layout_width="169dp"
+                        android:layout_height="50dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDarkgray"
+                android:orientation="horizontal"
+                android:layout_marginTop="109dp"/>
+    </RelativeLayout>
+
+</layout>
