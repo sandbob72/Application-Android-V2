@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -49,6 +50,11 @@ class MainCategories : AppCompatActivity() {
                     dialog, which ->
             }
             mAlertDialog.show()
+        })
+
+        binding.arrowBack.setOnClickListener({
+            val intent = Intent(this@MainCategories,MainActivity::class.java)
+            startActivity(intent)
         })
 
 
